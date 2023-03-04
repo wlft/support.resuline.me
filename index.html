@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Resuline support</title>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico?">
+
+        <!-- ICONS -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    </head>
+    <style>
+        body {
+            background-color: #000000;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        input {
+            border: none;
+            outline: none;
+        }
+
+        .material-symbols-outlined {
+            font-variation-settings:
+            'FILL' 1,
+            'wght' 400,
+            'GRAD' 0,
+            'opsz' 48
+        }
+
+        .topbar {
+			background-color: #000000;
+			color: #fff;
+			display: flex;
+			align-items: center;
+			height: 50px;
+			padding: 0 20px;
+		}
+		
+		.left-buttons {
+			display: flex;
+			align-items: center;
+			flex: 1;
+		}
+
+        .button {
+			margin-right: 20px;
+			font-size: 18px;
+			font-weight: bold;
+			cursor: pointer;
+			transition: all 0.3s ease;
+            color: #FFF;
+		}
+		
+		.button:hover {
+			color: #bebebe;
+		}
+
+        .logo {
+			flex: 1;
+			text-align: right;
+		}
+		
+		.logo img {
+			height: 30px;
+		}
+
+        .hero {
+			background-image: url("https://images.unsplash.com/photo-1429041966141-44d228a42775");
+			background-size: cover;
+			background-position: center;
+			height: calc(100vh - 50px);
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: top;
+            padding-right: 50px;
+            position: relative;
+            z-index: 1;
+		}
+		
+		.hero h1 {
+			font-size: 60px;
+			margin: 0;
+			line-height: 1.2;
+			text-align: center;
+			color: #fff;
+			/* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); */
+            z-index: 1;
+		}
+		
+		.hero p {
+			font-size: 24px;
+			margin: 20px 0 0;
+			text-align: center;
+			color: #c1c1c1;
+			/* text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.9); */
+            z-index: 1;
+		}
+		
+		.hero-buttons {
+			margin-top: 50px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+            text-align: center;
+            padding-right: 50px;    
+            z-index: 1;
+		}
+
+        .button-hollow {
+			margin-right: 20px;
+			font-size: 18px;
+			font-weight: bold;
+			cursor: pointer;
+			border: 2px solid #FFF;
+			border-radius: 5px;
+			padding: 10px 20px;
+			background-color: transparent;
+			color: #FFF;
+			transition: all 0.3s ease;
+		}
+		
+		.button-hollow:hover {
+			background-color: #FFF;
+			color: #000;
+		}
+		
+		.button-white {
+			font-size: 18px;
+			font-weight: bold;
+			cursor: pointer;
+			border: 2px solid #fff;
+			border-radius: 5px;
+			padding: 10px 20px;
+			background-color: #fff;
+			color: #333;
+			transition: all 0.3s ease;
+		}
+		
+		.button-white:hover {
+			background-color: #000;
+            border: 2px solid #000;
+			color: #fff;
+		}
+
+        .hero-gradient {
+			/* background: linear-gradient(to top, rgba(0,0,0,0), rgba(0,0,0,0.8)); */
+            background-color: rgba(0,0,0,0.6);
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 0;
+		}
+
+        .bottom-bar {
+			display: flex;
+			align-items: center;
+			justify-content: flex-start;
+			background-color: #00000000;
+			padding: 0px;
+			position: fixed;
+			bottom: 10px;
+			left: 10px;
+			width: 100%;
+			z-index: 2;
+		}
+		.bottom-bar a {
+			color: white;
+			font-size: 16px;
+			margin-left: 4px;
+			text-decoration: none;
+		}
+		.bottom-bar span {
+			height: 20px;
+			width: 20px;
+			margin-right: 4px;
+            padding-bottom: 5px;
+		}
+
+        .hero a {
+            text-decoration: none;
+        }
+
+        .get-gold-btn {
+        border: 2px solid #917d2e;
+        background-color: transparent;
+        color: #917d2e;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 20px;
+        border-radius: 5px;
+        text-decoration: none;
+        transition: all 0.3s;
+        margin-left: auto;
+      }
+
+      .get-gold-btn:hover {
+        background-color: #917d2e;
+        color: #FFF;
+      }
+
+      .search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.search-bar {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  border-radius: 20px;
+  padding: 6px 12px;
+  width: 400px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.search-bar i {
+  color: white;
+  margin-right: 10px;
+}
+
+.search-bar input {
+  flex-grow: 1;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+.search-bar input::placeholder {
+  color: #a9a9a9;
+}
+
+.search-bar i.fa-times {
+  margin-left: auto;
+  cursor: pointer;
+}
+
+html, body {margin: 0; height: 100%; overflow: hidden}
+
+@media screen and (max-width: 900px) {
+			.hero h1 {
+                font-size: 300%;
+            }
+            .search-bar {
+                width: 95%;
+            }
+		}
+    </style>
+    <body>
+        <div class="topbar">
+            <div class="left-buttons">
+                <a class="button" href="/">Home</a>
+                <a class="button" href="//docs.resuline.me">Docs</a>
+                <a class="button" href="/articles">Articles</a>
+                <a class="button" href="//status.resuline.me">Status</a>
+            </div>
+
+            <div style="display: none;">
+                <!-- Duplicate the "Get Gold" button from the main page here -->
+                <a href="/install-gold.html" class="get-gold-btn">Get Gold</a>
+            </div>
+            <div class="logo">
+                <a href="/"><img src="/Resuline Full.png" alt="Logo"></a>
+            </div>
+        </div>
+
+       
+
+          <main>
+            <div class="search-bar">
+                <!-- <i class="fas fa-search"></i> -->
+                <span class="material-symbols-outlined" style="color: #FFF;"> search </span>
+                <input type="text" placeholder="Search...">
+                <!-- <i class="fas fa-times"></i> -->
+                <span class="material-symbols-outlined" style="color: #FFF;"> close </span>
+              </div>
+          </main>
+
+        <div class="hero">
+            <div class="hero-gradient"></div>
+            <h1>ResuLine Support</h1>
+            <p>Support is currently down. Please check again later.</p>
+            <div class="hero-buttons">
+                <button class="button-hollow" onclick="javascript:window.location.href='/contact.html'">Contact</button>
+                <button class="button-white" onclick="javascript:window.location.href='/articles.html'">Help Articles</button>
+            </div>
+            
+        </div>
+    </body>
+</html>
